@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>継波 | AI活用支援・セミナー</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.8;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #0f2f4a;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #a8c8e8;
+      letter-spacing: 0.1em;
+    }
+
+    /* セクション共通 */
+    section {
+      padding: 70px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      color: #0f2f4a;
+      border-left: 4px solid #2a7fc1;
+      padding-left: 14px;
+      margin-bottom: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    /* 区切り線 */
+    .divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* リード文 */
+    .lead {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    /* 実績カード */
+    .stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .stat-card {
+      flex: 1;
+      min-width: 200px;
+      background: #f0f6fb;
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #2a7fc1;
+    }
+
+    .stat-card .label {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    /* サービスカード */
+    .service-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid #dde8f0;
+      border-radius: 10px;
+      padding: 28px;
+      position: relative;
+    }
+
+    .service-card .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-free {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .badge-mid {
+      background: #fff3e0;
+      color: #e65100;
+    }
+
+    .badge-adv {
+      background: #ede7f6;
+      color: #4527a0;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: #0f2f4a;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: #555;
+    }
+
+    .service-card .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #2a7fc1;
+      margin-top: 14px;
+    }
+
+    /* セミナー日程 */
+    .schedule-box {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .schedule-box p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .qr-placeholder {
+      width: 120px;
+      height: 120px;
+      background: #dde8f0;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    /* お問い合わせ */
+    .contact-box {
+      background: #0f2f4a;
+      color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #a8c8e8;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid #a8c8e8;
+      padding-bottom: 2px;
+    }
+
+    /* フッター */
+    footer {
+      background: #0a1f30;
+      color: #667;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <h1>継波</h1>
+    <p>AI活用支援 &nbsp;|&nbsp; セミナー &nbsp;|&nbsp; 導入コンサルティング</p>
+  </header>
+
+  <!-- 理念 -->
+  <section>
+    <h2>AIを、もっと身近に。</h2>
+    <p class="lead">
+      「AIって難しそう」と感じている方から、業務に本格活用したい企業まで。<br>
+      一人ひとりのペースに合わせて、AI活用の第一歩をサポートします。
+    </p>
+    <p class="lead">
+      Claude・ChatGPTをはじめとした最新AIツールの実践的な使い方を、<br>
+      わかりやすく、すぐ使えるかたちでお伝えします。
+    </p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 実績 -->
+  <section>
+    <h2>実績</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <div class="number">3回</div>
+        <div class="label">市民向けAI入門セミナー<br>（市主催・登壇実績）</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">約50名</div>
+        <div class="label">セミナー延べ受講者数</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">10名以上</div>
+        <div class="label">マンツーマンAI活用<br>レクチャー実績</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- サービス -->
+  <section>
+    <h2>サービス</h2>
+    <div class="service-cards">
+
+      <div class="service-card">
+        <span class="badge badge-free">無料・入門</span>
+        <h3>今日から始める！生成AI体験会</h3>
+        <p>「AIって難しそう…」という方向けの完全入門講座。スマホ・PCでその場で触りながら学べます。</p>
+        <ul style="margin-top: 12px; padding-left: 20px; font-size: 0.9rem; color: #555; line-height: 2;">
+          <li>生成AIとは何か？やさしく解説</li>
+          <li>ChatGPT・Gemini・Grokの違いと使い分け</li>
+          <li>AIとの会話を実際に体験</li>
+          <li>画像生成にチャレンジ（年賀状・ペット・風景など）</li>
+        </ul>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: #888;">90分｜少人数制｜スマホのみでも参加可</p>
+        <p style="margin-top: 8px; font-size: 0.85rem; color: #888;">※ Googleアカウントをお持ちでない方も参加できます。事前に作成しておくとスムーズです（当日サポートあり）。</p>
+        <div class="price">無料</div>
+      </div>
+
+      <div class="service-card">
+        <span class="badge badge-mid">中級</span>
+        <h3>AI実践活用セミナー</h3>
+        <p>入門の次のステップ。Claude・ChatGPT・Copilot・Geminiを使い分けながら、日常業務や仕事に直結する活用法を少人数で丁寧に解説します。</p>
+        <ul style="margin-top: 12px; padding-left: 20px; font-size: 0.9rem; color: #555; line-height: 2;">
+          <li>ツール別の得意・不得意と選び方</li>
+          <li>文書作成・要約・アイデア出しの実践</li>
+          <li>Office・Googleツールとの連携活用</li>
+        </ul>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: #888;">90分｜少人数制</p>
+        <div class="price">3,000円</div>
+      </div>
+
+      <div class="service-card">
+        <span class="badge badge-adv">上級</span>
+        <h3>Claude Code 業務自動化セミナー</h3>
+        <p>AIを「使う」から「動かす」へ。Claude Codeを活用して、繰り返し業務の自動化やオリジナルツールの作成に挑戦します。プログラミング知識は不要です。</p>
+        <ul style="margin-top: 12px; padding-left: 20px; font-size: 0.9rem; color: #555; line-height: 2;">
+          <li>Claude Codeのセットアップと基本操作</li>
+          <li>業務フローの自動化を実演</li>
+          <li>自社・自分の仕事への応用ワーク</li>
+        </ul>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: #888;">120分｜少人数制</p>
+        <div class="price">10,000円</div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 開催日程 -->
+  <section>
+    <h2>開催日程</h2>
+    <div class="schedule-box">
+      <p>次回開催日程は近日公開予定です。<br>更新情報はこのページでご確認ください。</p>
+
+      <div class="schedule-item" style="margin-top: 24px; text-align: left; background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #dde8f0;">
+        <span class="badge badge-free" style="display:inline-block; font-size:0.75rem; font-weight:bold; padding:4px 12px; border-radius:20px; background:#e8f5e9; color:#2e7d32;">無料</span>
+        <div style="margin-top: 10px; font-weight: bold; color: #0f2f4a;">AI入門セミナー</div>
+        <div style="color: #888; font-size: 0.9rem; margin-top: 6px;">開催日時：近日公開予定</div>
+        <div style="color: #888; font-size: 0.9rem;">会場：調整中</div>
+      </div>
+
+      <div class="schedule-item" style="margin-top: 14px; text-align: left; background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #dde8f0;">
+        <span class="badge badge-mid" style="display:inline-block; font-size:0.75rem; font-weight:bold; padding:4px 12px; border-radius:20px; background:#fff3e0; color:#e65100;">中級</span>
+        <div style="margin-top: 10px; font-weight: bold; color: #0f2f4a;">AI実践活用セミナー</div>
+        <div style="color: #888; font-size: 0.9rem; margin-top: 6px;">開催日時：近日公開予定</div>
+        <div style="color: #888; font-size: 0.9rem;">会場：調整中</div>
+      </div>
+
+      <div class="schedule-item" style="margin-top: 14px; text-align: left; background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #dde8f0;">
+        <span class="badge badge-adv" style="display:inline-block; font-size:0.75rem; font-weight:bold; padding:4px 12px; border-radius:20px; background:#ede7f6; color:#4527a0;">上級</span>
+        <div style="margin-top: 10px; font-weight: bold; color: #0f2f4a;">Claude Code 業務自動化セミナー</div>
+        <div style="color: #888; font-size: 0.9rem; margin-top: 6px;">開催日時：近日公開予定</div>
+        <div style="color: #888; font-size: 0.9rem;">会場：調整中</div>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">
+        お急ぎの方は <a href="mailto:info@tsugunami.jp" style="color: #2a7fc1;">info@tsugunami.jp</a> までお問い合わせください。
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- お問い合わせ -->
+  <section>
+    <h2>お問い合わせ</h2>
+    <div class="contact-box">
+      <p>セミナーのご参加・企業へのAI導入支援など、お気軽にご連絡ください。</p>
+      <a href="mailto:info@tsugunami.jp">info@tsugunami.jp</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 継波 All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
